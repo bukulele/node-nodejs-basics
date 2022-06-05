@@ -1,3 +1,5 @@
+import { createHash } from "crypto";
+
 export const calculateHash = async () => {
-    // Write your code here 
+  const hash = createHash("sha256");
 };
