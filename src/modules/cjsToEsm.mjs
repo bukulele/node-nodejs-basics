@@ -9,11 +9,9 @@ const __dirname = dirname(__filename);
 
 export let unknownObject;
 
-export const createMyServer = () => {
-  http.createServer((_, res) => {
-    res.end("Request accepted");
-  });
-};
+export const createMyServer = http.createServer((_, res) => {
+  res.end("Request accepted");
+});
 
 const doSomeRandom = async () => {
   const random = Math.random();
@@ -36,6 +34,6 @@ const consoleLogs = () => {
   console.log(`Path to current directory is ${__dirname}`);
 };
 
-createMyServer();
+createMyServer.listen(8000);
 doSomeRandom();
 consoleLogs();
