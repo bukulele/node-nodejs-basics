@@ -1,7 +1,5 @@
 import { Transform } from "stream";
 import { stdin, stdout } from "process";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
 
 export const transform = async () => {
   const reverse = new Transform({
